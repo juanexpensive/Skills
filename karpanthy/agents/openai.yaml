@@ -1,0 +1,4 @@
+interface:
+  display_name: "Karpanthy"
+  short_description: "Behavioral coding guidelines for careful work"
+  default_prompt: "Use $karpanthy to follow the repo's coding guidelines with explicit assumptions and minimal, verified changes."
