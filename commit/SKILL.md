@@ -1,0 +1,76 @@
+---
+name: commit
+description: Stage and commit changes with a clean conventional commit message. Use when the user asks to commit, make a commit, or save changes. Before committing, ask which Git user identity to use if the machine has multiple identities or the user requested that confirmation.
+---
+
+# Commit
+
+Create a git commit following these exact rules.
+
+## Commit message format
+
+```text
+<type>(<scope>): <what changed, imperative, lowercase>
+```
+
+Types — pick exactly one:
+- `feat` — new capability or screen
+- `fix` — corrects broken behavior
+- `refactor` — restructures code without changing behavior
+- `style` — formatting, whitespace, CSS-only changes
+- `test` — adds or updates tests
+- `docs` — documentation only
+- `chore` — build, deps, config, CI
+
+Scope — optional, lowercase, one word. Use the module, layer, or feature name.
+Examples: `auth`, `transcription`, `ui`, `api`, `jobs`, `models`, `player`
+Omit it if the change is truly cross-cutting.
+
+Subject line rules:
+- Use imperative mood: `add x`, not `adds x` or `added x`
+- Keep lowercase after the colon
+- Do not end with a period
+- Keep the full line at 72 characters or less
+- Do not add AI attribution, trailers, or boilerplate
+
+Body:
+- Add a body only if the why is non-obvious and not already clear in the diff
+- Skip the body for straightforward changes
+
+## Workflow
+
+1. Run `git diff --stat HEAD` and `git status` to understand what changed.
+2. If the user provided an argument hint, use it to inform type or scope.
+3. Before staging or committing, ask which Git user identity to use when the user works with multiple identities or explicitly asked for confirmation.
+4. If needed, show the current repo identity with `git config user.name` and `git config user.email`, then apply the identity the user chose with repo-local `git config`.
+5. Infer the best type and scope from the actual diff. Do not guess from filenames alone.
+6. Stage only the relevant files with `git add <specific files>`. Never use `git add -A` blindly.
+7. Write the commit message in the required format.
+8. Run `git commit -m "<message>"`.
+9. Return only the final one-line commit message.
+
+## Good examples
+
+```text
+feat(transcription): add speaker diarization support
+fix(jobs): prevent race condition on concurrent status updates
+refactor(models): extract token validation into get_hf_token
+style(player): align waveform controls to baseline grid
+chore: upgrade whisper to 1.1.10
+docs: document Windows NamedTemporaryFile workaround
+```
+
+## Bad examples
+
+```text
+update stuff
+fix bug
+changes
+added feature
+fixed the issue
+feat: implement the new transcription feature that was requested
+```
+
+## Empty diff rule
+
+If there is nothing to commit, say so and stop.

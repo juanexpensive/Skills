@@ -1,0 +1,4 @@
+interface:
+  display_name: "Commit"
+  short_description: "Commit changes with clean conventional commits"
+  default_prompt: "Use $commit to stage relevant files, ask which Git identity to use if needed, and create a clean conventional commit message."

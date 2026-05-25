@@ -1,0 +1,4 @@
+interface:
+  display_name: "Translate Legacy Projects"
+  short_description: "Translate and modernize legacy code safely"
+  default_prompt: "Use $translate-legacy-projects to plan and execute a safe translation of a legacy codebase with parity checks."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Split C# Types"
+  short_description: "Separa tipos C# y reordena carpetas"
+  default_prompt: "Use $split-csharp-types to refactor this C# code so each class, interface, enum, struct, or record lives in its own file, services are grouped by responsibility, and DTOs/models/contracts are moved out of Services when appropriate."

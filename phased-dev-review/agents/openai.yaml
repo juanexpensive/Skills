@@ -1,0 +1,4 @@
+interface:
+  display_name: "Phased Dev Review"
+  short_description: "Plan, implement, and review code in phases"
+  default_prompt: "Plan this work in phases, keep implementation.md and implementation_details.md updated, stop after each phase for review, and finish with an honest confidence check."
