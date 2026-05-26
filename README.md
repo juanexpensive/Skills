@@ -1,6 +1,5 @@
 # Skills
 
-Repo con las skills que uso en general. 
+A repository showcasing the skills I use in my projects.
 
-
-Va variando, hay veces que me gusta mucho alguna y la uso constantemente mientras que otras son concretas para trabajos especificos y serán usadas dos veces. 
+This list is dynamic: there are some tools I thoroughly enjoy and use on a daily basis, while others are highly specific to certain projects and might only be used occasionally.
