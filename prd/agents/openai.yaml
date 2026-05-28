@@ -1,0 +1,4 @@
+interface:
+  display_name: "PRD"
+  short_description: "Generate a structured Product Requirements Document"
+  default_prompt: "Use $prd to ask 3-5 clarifying questions, then generate a structured PRD and save it to tasks/prd-[feature-name].md without implementing the feature."
